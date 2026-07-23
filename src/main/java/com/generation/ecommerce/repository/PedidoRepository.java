@@ -9,6 +9,6 @@ import com.generation.ecommerce.model.Pedido;
 
 public interface PedidoRepository extends JpaRepository<Pedido, Long> {
 
-
     List<Pedido> findAllByClienteNomeContainingIgnoreCase(String nome);
+
 }
