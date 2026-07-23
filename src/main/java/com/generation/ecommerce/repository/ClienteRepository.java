@@ -1,10 +1,13 @@
 package com.generation.ecommerce.repository;
 
-import org.springframework.data.jpa.repository.JpaRepository;
-	
+import java.util.List;
 
-	import com.generation.ecommerce.model.Cliente;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.generation.ecommerce.model.Cliente;
 
 	public interface ClienteRepository extends JpaRepository<Cliente, Long> {
 
+		  List<Cliente> findAllByNomeContainingIgnoreCase(String nome);
+		
 	}
